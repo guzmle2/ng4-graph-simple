@@ -1,0 +1,19 @@
+{
+  "data": {
+    "type": "URL (Malware URL)",
+    "status": "Active",
+    "subtype_name": "USTEAL",
+    "crime_server_url": "http://crime_server_2.com/2bb3b70ece76e29013aca7cce50eda9b",
+    "severity": "VERY-HIGHT",
+    "confidence": 85,
+    "score": 56,
+    "indicator": "www.indicator.com",
+    "ip": "192.168.0.1",
+    "tags": "AZORult",
+    "last_modified": "2018-02-05T14:30:18.875658+00:00",
+    "entries": 1,
+    "country": "ES",
+    "asn": 198414
+  },
+  "id": "262961"
+}

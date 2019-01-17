@@ -1,0 +1,43 @@
+@import "assets/css/circle";
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  .section-menu {
+    flex: 0 1 auto;
+  }
+  .section-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    .content {
+      overflow-x: hidden;
+      flex: 1;
+    }
+  }
+}
+
+.bg-theme {
+  background: #7386D5 !important;
+}
+
+body{
+  font-size: 12px !important;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.strong{
+  font-weight: bold !important;
+  font-size: 14px !important;
+}

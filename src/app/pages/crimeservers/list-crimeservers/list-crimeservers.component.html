@@ -1,0 +1,37 @@
+<table class="responsive-table striped" >
+  <thead>
+  <tr>
+    <th>Seen</th>
+    <th>URL</th>
+    <th>Type</th>
+    <th>SubType</th>
+    <th>Status</th>
+    <th>TM Seen</th>
+    <th>TM Status</th>
+    <th>Evidences</th>
+    <th>API</th>
+    <th>Free Api</th>
+    <th>Details</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let l of listCrimeServers?.data" >
+
+    <td>{{ l.attributes.first_seen | date : 'medium'}}</td>
+    <td>{{ l.attributes.crime_server_url ? l.attributes.crime_server_url : '-'}}</td>
+    <td>{{ l.attributes.main_type ? l.attributes.main_type : '-'}}</td>
+    <td>{{ l.attributes.subtype_name? l.attributes.subtype_name : '-'}}</td>
+    <td  class="center">
+      <i [class.blue-text]="l.attributes.status === 'online'" class="material-icons red-text bold">
+       {{l.attributes.status === 'online' ?'cloud': 'cloud_off'}}
+      </i>
+    </td>
+    <td  class="center">-</td>
+    <td  class="center">-</td>
+    <td class="center"><i class="material-icons red-text bold ">block</i></td>
+    <td class="center"><i class="material-icons red-text bold">help</i></td>
+    <td class="center"><i class="material-icons red-text bold">help</i></td>
+    <td class="center"><i class="material-icons blue-text bold" [routerLink]="['/crimeservers/detail', l.id ]">zoom_in</i></td>
+  </tr>
+  </tbody>
+</table>

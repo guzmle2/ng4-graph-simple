@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-wrapper">
+    <ul class="left hide-on-large">
+      <li>
+        <a data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a  [routerLink]="['/']" routerLinkActive="active">Dashboard </a></li>
+      <li><a  [routerLink]="['/crimeservers']" routerLinkActive="active">List CrimeServer </a></li>
+
+    </ul>
+    <a class="brand-logo center">NavHeader</a>
+  </div>
+</nav>

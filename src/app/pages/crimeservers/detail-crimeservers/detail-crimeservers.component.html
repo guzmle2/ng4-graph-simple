@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="container">
+
+    <h5>
+      Detail for {{crimeDetail.indicator}}
+    </h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col m6">
+    <div class="card-panel">
+      <div class="row center flex-center">
+        <div class="col m4">
+          <div class="row">
+            <strong>Severity</strong>
+          </div>
+          <div class="row" style="margin-top: 45px !important;">
+            <h4 [class.red-text]="true">{{crimeDetail.severity}}</h4>
+          </div>
+        </div>
+        <div class="col m4 ">
+          <div class="row">
+            <strong>Confidence</strong>
+          </div>
+          <div class="col s12">
+            <div class="c100 p{{crimeDetail.confidence}} green-graph center">
+              <span>{{crimeDetail.confidence}}</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col m4">
+          <div class="row">
+            <strong>ThreatScore</strong>
+          </div>
+          <div class="col s12">
+            <div class="c100 p{{crimeDetail.score}} center red-graph">
+              <span>{{crimeDetail.score}}</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Status</div>
+          <div class="col s6">{{crimeDetail.status}}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Type</div>
+          <div class="col s6">{{crimeDetail.type}}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Indicator</div>
+          <div class="col s6">{{crimeDetail.indicator}}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">IP</div>
+          <div class="col s6">{{crimeDetail.ip}}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Tags</div>
+          <div class="col s6"><span class="new badge">{{crimeDetail.tags}}</span></div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Last Modified</div>
+          <div class="col s6">{{crimeDetail.last_modified | date: 'medium'}}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Entries</div>
+          <div class="col s6">{{crimeDetail.entries }}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">Country</div>
+          <div class="col s6">{{crimeDetail.country }}</div>
+        </div>
+        <div class="col s12">
+          <div class="col s4 right-align strong h4">ASN</div>
+          <div class="col s6">{{crimeDetail.asn }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col m6">
+    <blv-diagram-editor *ngIf="model" [model]="model"></blv-diagram-editor>
+  </div>
+</div>

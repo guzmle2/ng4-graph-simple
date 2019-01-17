@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s12 " *ngFor="let w of widtges" style="width: 20%">
+    <div class="card blue-grey darken-1" (click)="typeGraph.next(w.name)">
+      <div class="card-content white-text">
+
+        <div>{{w.data[0].attributes.count}}</div>
+        <small>{{w.name}}</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row ">
+  <div class="col s12 m8 l8">
+    <div id="revenue-chart" class="card" *ngIf="graphic && graphic.data && graphic.labels">
+      <div class="card-content">
+        <h5 class="header mt-0">{{graphic.name}}
+          <small class="purple-text small text-darken-1 ml-1">
+            <i class="material-icons">keyboard_arrow_up</i> 15.58 %
+          </small>
+          <a class="waves-effect waves-light btn  right" style="border-radius: 50px">Details</a>
+        </h5>
+        <div class="row">
+          <div class="col s12">
+            <div class="yearly-revenue-chart">
+              <canvas baseChart
+                      [datasets]="graphic.data"
+                      [labels]="graphic.labels"
+                      [options]="optionGrpah"
+                      [colors]="lineChartColors"
+                      [legend]="false"
+                      [chartType]="'line'"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
