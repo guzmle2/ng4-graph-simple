@@ -1,7 +1,7 @@
 {
   "author": "Leonor Guzman <ronoel54@gmail.com>",
   "name": "ng4-graph-simple",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
